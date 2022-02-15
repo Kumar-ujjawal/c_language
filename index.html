@@ -1,0 +1,78 @@
+<!Doctype html>
+<Html>
+<Body>
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int fact,num,choice,i,flag=0;
+    printf("welcome🙏\n");
+    printf("what do you want to calculate\n");
+    printf("please chose\n");
+    while(1)
+    {
+     printf("1.for factorial\n");
+     printf("2.for prime checking\n");
+     printf("3.for even odd checking\n");  
+     printf("4.for exit\n");
+     printf("your choice:  ");
+     scanf("%d",&choice);
+     switch (choice)
+     {
+       case 1:
+       printf("you choosed factorial\n");
+       printf("so enter your number ");
+       scanf("%d",&num);
+       fact=1;
+      for(int i=1;i<=num;i++)
+       {
+      
+       fact=fact*i;
+       
+        }
+      printf("factorial for %d is %d\n\n",num,fact);
+     break;
+     
+     case 2:
+     printf("you choosed to check whether th number is prime or not\n");
+     printf("so enter your number\n");
+     scanf("%d",&num);
+     
+    for (int i=2;i<num;i++)
+     {
+      if(num%i==0)
+       {
+       printf("not a prime number\n\n");
+       flag=1;
+       break;
+       }    
+    }
+    if(flag==0)
+     printf("it is a prime number\n\n");
+    
+    break;  
+    
+    case 3:
+    printf("you choosed to check even or odd number\n");
+    printf("enter your number\n");
+    scanf("%d",&num);
+    
+    if(num%2 ==0)
+     printf("even number\n\n");
+    else 
+     printf("odd number\n\n");
+    break;
+  
+    case 4: 
+     exit(0);
+    
+    default:
+    printf("wrong choice 🙃\n\n");          
+    }
+    }
+    
+     return 0;
+}
+</Body>
+</Html>
